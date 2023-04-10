@@ -32,7 +32,7 @@ Dataengineering-db is a relational database that will be used as the backend for
 S3 data lake (trackman-lake) is used to store the ingested data in a suitable format for future use. This data can be used to create a data warehouse and make it available to analysts for reporting and analysis.
 
 Notes:
-- In the future, if we want to ingest data from some other data sources using AWS Kinesis and same AWS Glue to extract and transform data from those sources and load it into this data lake (trackman-lake).
+- In the future, if we want to ingest data from some other data sources in that case my suggestion is to use AWS Kinesis and same AWS Glue to extract and transform data from those sources and load it into this data lake (trackman-lake).
 
 - The data in the data lake will be stored in a suitable format for future use, which will enable efficient querying and analysis of data in the data warehouse. 
 
