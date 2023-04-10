@@ -36,7 +36,7 @@ Notes:
 
 - The data in the data lake will be stored in a suitable format for future use, which will enable efficient querying and analysis of data in the data warehouse. 
 
-- Amazon Redshift: Redshift is a fully-managed, petabyte-scale data warehouse service that enables you to quickly and easily analyze all your data using SQL and your existing business intelligence tools. With Redshift, we can store and analyze structured and semi-structured data from a variety of sources, including S3 (trackman-lake), and easily scale compute and storage resources as data grows. 
+- Amazon Redshift: Redshift is a fully-managed, petabyte-scale data warehouse service that enables to quickly and easily analyze all data using SQL and existing business intelligence tools. With Redshift, we can store and analyze structured and semi-structured data from a variety of sources, including S3 (trackman-lake), and easily scale compute and storage resources as data grows. 
 
 - AWS Kinesis: In the future data we can use Kinesis as it is a fully managed real-time streaming data service that is designed to ingest and process large amounts of data in real-time. To integrate AWS Kinesis with AWS Glue, we can use the Kinesis Data Firehose service. Kinesis Data Firehose is a fully managed service that makes it easy to load streaming data into data stores and analytics tools. The following is an overview of how the architecture of AWS Kinesis to AWS Glue works: <br/>
   --> Data is ingested into Kinesis data streams from various data sources. <br/>
