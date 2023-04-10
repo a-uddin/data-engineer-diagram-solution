@@ -34,8 +34,13 @@ S3 data lake (trackman-lake) is used to store the ingested data in a suitable fo
 Notes:
 - In the future, if we want to ingest data from some other data sources, we can use AWS Glue to extract and transform data from those sources and load it into this data lake.
 - The data in the data lake will be stored in a suitable format for future use, which will enable efficient querying and analysis of data in the data warehouse.
-- Amazon Redshift can be used as a data warehouse to make the data available to analysts for reporting and analysis. 
-- For the query we can use Athena.
+- Amazon Redshift: Redshift is a fully-managed, petabyte-scale data warehouse service that enables you to quickly and easily analyze all your data using SQL and your existing business intelligence tools. With Redshift, you can store and analyze structured and semi-structured data from a variety of sources, including S3, and easily scale your compute and storage resources as your data grows. 
+- AWS Kinesis: Kinesis is a fully managed real-time streaming data service that is designed to ingest and process large amounts of data in real-time. To integrate AWS Kinesis with AWS Glue, you can use the Kinesis Data Firehose service. Kinesis Data Firehose is a fully managed service that makes it easy to load streaming data into data stores and analytics tools. The following is an overview of how the architecture of AWS Kinesis to AWS Glue works:
+  --> Data is ingested into Kinesis data streams from various data sources.
+  --> Kinesis Data Firehose is configured to consume the data from the Kinesis data streams and transform it into the desired format for loading into the target data store (in this case, AWS Glue).
+  --> Kinesis Data Firehose buffers the data and delivers it to AWS Glue in batches, using the AWS Glue Data Catalog as the target data store.
+  --> Once the data is loaded into the AWS Glue Data Catalog, it can be queried using AWS Glue ETL jobs or other analytics tools that support the AWS Glue Data Catalog.
+  <br/>
 - We can use AWS CloudFormation to deploy this architecture, which will automate the provisioning and deployment of resources.
 - This solution is scalable, maintainable, reliable, and cost-effective. It can handle data from multiple sources and can be easily extended in the future to include additional data sources and services as needed.
 - With this architecture, data is ingested from trackman-backend, transformed and loaded into dataengineering-db and trackman-lake in a timely manner, and future data sources can be easily integrated into the pipeline.
