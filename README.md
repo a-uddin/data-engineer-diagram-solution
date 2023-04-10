@@ -4,7 +4,7 @@ Solution Approach: <br/>
 For this challenge, I propose an architecture that utilizes AWS services to create an efficient, reliable, and scalable pipeline to ingest data from trackman-backend to S3 data lake and dataengineering-db, while ensuring data is delivered within the specified time limits. I recommend using AWS Glue, Amazon CloudWatch, Amazon RDS, and Amazon S3.
 
 Solution diagram is below: <br/>
-<a href="https://github.com/a-uddin/data-engineer-diagram-solution/blob/main/TrackMan.png" target="_blank">Diagram link here</a>
+<a href="https://github.com/a-uddin/data-engineer-diagram-solution/blob/main/TrackMan.png" target="_blank" width="500" height="333">Diagram link here</a>
 
 Components:
 
