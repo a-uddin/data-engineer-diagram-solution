@@ -32,17 +32,17 @@ Dataengineering-db is a relational database that will be used as the backend for
 S3 data lake (trackman-lake) is used to store the ingested data in a suitable format for future use. This data can be used to create a data warehouse and make it available to analysts for reporting and analysis.
 
 Notes:
-- In the future, if we want to ingest data from some other data sources, we can use AWS Glue to extract and transform data from those sources and load it into this data lake.
+- In the future, if we want to ingest data from some other data sources using AWS Kinesis and same AWS Glue to extract and transform data from those sources and load it into this data lake (trackman-lake).
 
-- The data in the data lake will be stored in a suitable format for future use, which will enable efficient querying and analysis of data in the data warehouse.
+- The data in the data lake will be stored in a suitable format for future use, which will enable efficient querying and analysis of data in the data warehouse. 
 
-- Amazon Redshift: Redshift is a fully-managed, petabyte-scale data warehouse service that enables you to quickly and easily analyze all your data using SQL and your existing business intelligence tools. With Redshift, you can store and analyze structured and semi-structured data from a variety of sources, including S3, and easily scale your compute and storage resources as your data grows. 
+- Amazon Redshift: Redshift is a fully-managed, petabyte-scale data warehouse service that enables you to quickly and easily analyze all your data using SQL and your existing business intelligence tools. With Redshift, we can store and analyze structured and semi-structured data from a variety of sources, including S3 (trackman-lake), and easily scale compute and storage resources as data grows. 
 
-- AWS Kinesis: Kinesis is a fully managed real-time streaming data service that is designed to ingest and process large amounts of data in real-time. To integrate AWS Kinesis with AWS Glue, you can use the Kinesis Data Firehose service. Kinesis Data Firehose is a fully managed service that makes it easy to load streaming data into data stores and analytics tools. The following is an overview of how the architecture of AWS Kinesis to AWS Glue works: <br/>
+- AWS Kinesis: In the future data we can use Kinesis as it is a fully managed real-time streaming data service that is designed to ingest and process large amounts of data in real-time. To integrate AWS Kinesis with AWS Glue, we can use the Kinesis Data Firehose service. Kinesis Data Firehose is a fully managed service that makes it easy to load streaming data into data stores and analytics tools. The following is an overview of how the architecture of AWS Kinesis to AWS Glue works: <br/>
   --> Data is ingested into Kinesis data streams from various data sources. <br/>
-  --> Kinesis Data Firehose is configured to consume the data from the Kinesis data streams and transform it into the desired format for loading into the target data store (in this case, AWS Glue). <br/>
+  --> Kinesis Data Firehose is configured to consume the data from the Kinesis data streams and transform it into the desired format for loading into the target data store (AWS Glue). <br/>
   --> Kinesis Data Firehose buffers the data and delivers it to AWS Glue in batches, using the AWS Glue Data Catalog as the target data store. <br/>
-  --> Once the data is loaded into the AWS Glue Data Catalog, it can be queried using AWS Glue ETL jobs or other analytics tools that support the AWS Glue Data Catalog.
+  --> Once the data is loaded into the AWS Glue Data Catalog, it can be queried using AWS Glue ETL jobs.
   <br/>
   
 - We can use AWS CloudFormation to deploy this architecture, which will automate the provisioning and deployment of resources.
