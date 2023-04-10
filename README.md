@@ -5,7 +5,7 @@ For this challenge, I propose an architecture that utilizes AWS services to crea
 
 Solution diagram is below: <br/>
 <a href="https://github.com/a-uddin/data-engineer-diagram-solution/blob/main/TrackMan.png" target="_blank">Diagram link here</a>
-<img src="https://github.com/a-uddin/data-engineer-diagram-solution/blob/main/TrackMan.png" width="500" height="333">
+<img src="https://github.com/a-uddin/data-engineer-diagram-solution/blob/main/TrackMan.png" width="1024" height="750">
 
 Components:
 
