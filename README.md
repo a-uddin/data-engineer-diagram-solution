@@ -1,7 +1,7 @@
 # Data engineer system design diagram
 
 <b>Business Case: </b> </br>
-Data Lake Infrastructure
+Data Lake Infrastructure </br>
 For this task, Design a pipeline in AWS for ingesting data into a data lake in S3.
 
 Task Description
