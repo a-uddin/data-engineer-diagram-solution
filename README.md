@@ -4,7 +4,7 @@
 Data Lake Infrastructure </br>
 For this task, Design a pipeline in AWS for ingesting data into a data lake in S3.
 
-Task Description
+Task Description: </br>
 You can approach this as a green field project where we have minimal existing infrastructure in place. You can assume the existance of the following resources:
 
 - A relation database called trackman-backend. </br>
