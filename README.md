@@ -1,26 +1,28 @@
 # Data engineer system design diagram
 
-<b>Business Case: </b>
+<b>Business Case: </b> </br>
 Data Lake Infrastructure
 For this task, Design a pipeline in AWS for ingesting data into a data lake in S3.
 
 Task Description
 You can approach this as a green field project where we have minimal existing infrastructure in place. You can assume the existance of the following resources:
 
-A relation database called trackman-backend.
-An s3 bucket called trackman-lake.
-Your solution should do the following
+- A relation database called trackman-backend. </br>
+- An s3 bucket called trackman-lake. </br>
 
-Read data from multiple different tables in trackman-backend.
-Ingest the data into a different relational database (dataengineering-db) which will be used as the backend for an internal application. You do not need to make considerations for what this application does.
-Load the data into trackman-lake in a suitable format.
+Your solution should do the following:
+
+- Read data from multiple different tables in trackman-backend.
+- Ingest the data into a different relational database (dataengineering-db) which will be used as the backend for an internal application. You do not need to make considerations for what this application does.
+- Load the data into trackman-lake in a suitable format. </br>
+
 Technical Requirements and Considerations
-Your solution should give consideration to the following constraints:
-trackman-backend is a production database which is used as the backend for a customer-facing application.
-Data should arrive in trackman-lake no later than 1 hour after it is first inserted into trackman-backend.
-Data should arrive in dataengineering-db no later than 30 minutes after it is first inserted into trackman-backend.
-At some point in the future, we expect to ingest data from other data sources in the company into this data lake.
-In the future we will want to make this data available to analysts through a data warehouse.
+- Your solution should give consideration to the following constraints:
+- trackman-backend is a production database which is used as the backend for a customer-facing application.
+- Data should arrive in trackman-lake no later than 1 hour after it is first inserted into trackman-backend.
+- Data should arrive in dataengineering-db no later than 30 minutes after it is first inserted into trackman-backend.
+- At some point in the future, we expect to ingest data from other data sources in the company into this data lake.
+- In the future we will want to make this data available to analysts through a data warehouse.
 
 <b>Solution Approach:</b> <br/>
 For this challenge, I propose an architecture that utilizes AWS services to create an efficient, reliable, and scalable pipeline to ingest data from trackman-backend to S3 data lake and dataengineering-db, while ensuring data is delivered within the specified time limits. I recommend using AWS Glue, Amazon CloudWatch, Amazon RDS, and Amazon S3.
